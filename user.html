@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Control Panel</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="user.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <div class="container-fluid" id="wrapper">
+        <nav id="nav" class="navbar navbar-light">
+            <a href="./admin.html">Admin panel</a>
+            <a href="./user.html">User panel</a>
+        </nav>
+        <div class="row">
+                <h1 class="text-right col-md-6">User</h1>
+                <select class="col-md-2" id="users"></select>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-center">Rate Film</h2>
+                <div class="form-inline">
+                    <select id="movieSel" class="col-md-8 form-control"></select>
+                    <input class="col-md-3 form-control" type="number" id="score" min="1" max="10" placeholder="Score">
+                </div>
+                <button class="btn btn-outline-primary col-md-11 mt-1" id="rateBtn">Rate</button>
+                <h4 id='success' style='display: none'>Success!<h4>
+            </div>
+            <div class="col-md-6">
+                <h2>What movie to watch?</h2>
+                <button class="btn btn-outline-primary col-md-12" id="recButton">Get recommendation</button>
+                <p id='movies' class="text-center" style='display: none'></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
